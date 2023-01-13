@@ -16,8 +16,8 @@
 
 <script lang="js">
 
-import logo from '@assets/images/favicon.webp'
-import github from '@assets/images/github.svg'
+import logo from '@images/favicon.webp'
+import github from '@images/github.svg'
 
 // Style SCSS
 import '@styles/navigation.scss'

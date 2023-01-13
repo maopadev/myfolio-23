@@ -23,6 +23,7 @@
     "eslint": "^8.31.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "sass": "^1.57.1",
     "svelte-eslint-parser": "^0.22.3"
   }
 }
