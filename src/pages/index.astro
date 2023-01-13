@@ -1,4 +1,7 @@
 ---
+// Layout Imports
+import MainLayout from '@layouts/main.astro';
+
 // Component Imports
 import Counter from '@components/Counter.svelte';
 
@@ -6,28 +9,8 @@ import Counter from '@components/Counter.svelte';
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Counter client:visible>
-				<h1>Hello, Svelte!</h1>
-			</Counter>
-		</main>
-	</body>
-</html>
+<MainLayout>
+	<Counter client:visible >
+		<h1>Hello Svelte!</h1>
+	</Counter>
+</MainLayout>
