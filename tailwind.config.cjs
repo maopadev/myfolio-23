@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	content: [
+		'./src/**/*.{astro,html,js,jsx,svelte,vue}'
+	],
 	enabled: process.env.NODE_ENV === 'production',
-	// classes that are generated dynamically, e.g. `rounded-${size}` and must
-	// be kept
 	safeList: [],
-	content: ['./src/**/*.{astro,html,js,jsx,svelte,vue}'],
+	darkMode: 'class',
 	theme: {
 		letterSpacing: {
       zero: "-0.07em"
@@ -34,7 +35,8 @@ module.exports = {
         'ocean-green': "#096162",
         'merino': '#F4ECE4',
         'victoria': '#5848A5',
-				'papaya': '#FF7000'
+				'papaya': '#FF7000',
+				'slate': '#DCE6EB'
       }
     },
 	},
