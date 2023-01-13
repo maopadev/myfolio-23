@@ -20,6 +20,6 @@ import logo from '$lib/assets/images/favicon.webp'
 import github from '$lib/assets/images/github.svg'
 
 // Style SCSS
-import '@style/navigation.scss'
+import '@styles/navigation.scss'
 
 </script>
