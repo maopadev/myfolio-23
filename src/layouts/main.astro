@@ -1,5 +1,5 @@
 ---
-import Navigation from '@components/navigation/index.svelte'
+import Navigation from '@components/navigation.svelte'
 import Background from '@components/background.svelte'
 ---
 <!-- Main Layout -->
@@ -11,7 +11,7 @@ import Background from '@components/background.svelte'
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
-	<body class="min-h-screen overflow-x-hidden">
+	<body class="flex flex-col w-full min-h-screen">
 		<Background client:visible />
 		<main>
 			<Navigation client:visible />
