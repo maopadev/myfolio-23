@@ -18,16 +18,22 @@
 			{coordinates}
 		</div>
 	</div>
-	<!-- Actions Buttons -->
-	<div id="corner-right" class="inline-flex h-12 w-auto gap-8 align-middle items-center">
-		<button id="dark" class=" flex items-center justify-center w-8 h-auto" 
+	<!-- 
+		Actions Buttons 
+		-> Implementar un FOREACH para todas las redes sociales a mostrar
+		-> Mostrar el modo oscuro
+	-->
+	<div id="corner-right" class="inline-flex h-12 w-auto gap-8 align-middle items-center ">
+		<button id="dark" class=" flex flex-wrap items-center justify-center w-auto h-8" 
 			on:click={() => console.log('Se pulso el Dark')}>
 			<h1>Dark mode</h1>
 		</button>
-		<a id="github-button" class="flex items-center justify-center w-8 h-auto" 
-			href="https://github.com/mrtgdev/my-portfolio">
-			<img src={github} alt="GitHub" />
-		</a>
+		<div class="border-2 border-slate rounded-full px-8 p-2">
+			<a id="github-button" class="flex items-center justify-center w-8 h-auto" 
+				href="https://github.com/mrtgdev/my-portfolio">
+				<img src={github} alt="GitHub" />
+			</a>
+		</div>
 	</div>
 </header>
 
