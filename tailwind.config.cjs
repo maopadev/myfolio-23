@@ -1,7 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	enabled: process.env.NODE_ENV === 'production',
+	// classes that are generated dynamically, e.g. `rounded-${size}` and must
+	// be kept
+	safeList: [],
 	content: ['./src/**/*.{astro,html,js,jsx,svelte,vue}'],
 	theme: {
+		letterSpacing: {
+      zero: "-0.07em"
+    },
 		extend: {
       animation: {
         blob: "blob 7s infinite",
@@ -22,6 +29,13 @@ module.exports = {
           },
         },
       },
+			colors: {
+        'bigstone': "#080808",
+        'ocean-green': "#096162",
+        'merino': '#F4ECE4',
+        'victoria': '#5848A5',
+				'papaya': '#FF7000'
+      }
     },
 	},
 	plugins: [],
