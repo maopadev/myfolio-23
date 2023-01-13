@@ -1,5 +1,6 @@
 ---
 import Navigation from '@components/navigation/index.svelte'
+import Background from '@components/background.svelte'
 ---
 <!-- Main Layout -->
 <!DOCTYPE html>
@@ -11,8 +12,9 @@ import Navigation from '@components/navigation/index.svelte'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
 	<body class="min-h-screen overflow-x-hidden">
+		<Background client:visible />
 		<main>
-			<Navigation />
+			<Navigation client:visible />
 			<slot />
 		</main>
 	</body>

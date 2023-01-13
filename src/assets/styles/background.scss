@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// > Background Noise
+.noise:before {
+	animation: grain 8s steps(10) infinite;
+	position: fixed;
+	height: 400%;
+    left: -50%;
+    position: fixed;
+    top: -100%;
+    width: 230%;
+	content: '';
+    background: url('../images/noise.gif');
+	/* you can control opacity of noise  */
+	opacity: 0.02;
+    z-index: 1;
+	pointer-events: none;
+}
+
+@keyframes grain {
+	0%, 100% { transform:translate(0, 0) }
+	20% { transform:translate(-5%, 0%) }
+	20% { transform:translate(-15%, 5%) }
+	30% { transform:translate(7%, 5%) }
+	40% { transform:translate(-5%, 0%) }
+	50% { transform:translate(-15%, 5%) }
+	60% { transform:translate(15%, 0%) }
+	70% { transform:translate(0%, 0%) }
+	80% { transform:translate(3%, 0%) }
+	90% { transform:translate(-10%, 0%) }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+.sphereOne {
+  width: 48rem;
+  height: 48rem;
+}
+
+.sphereThree {
+  width: 62rem;
+  height: 62rem;
+}
