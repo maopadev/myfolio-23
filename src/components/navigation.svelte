@@ -44,7 +44,7 @@ import { DarkMode } from 'flowbite-svelte'
 // Style SCSS
 import '@styles/navigation.scss'
 
-let coordinates = ''
+let coordinates = `40° 27' 2.232''\nN 3° 41' 29.4'' W`
 
 const getCurrentYear = (() => {
     let currentTime = new Date()
