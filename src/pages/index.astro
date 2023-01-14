@@ -4,18 +4,21 @@ import MainLayout from '@layouts/main.astro';
 ---
 
 <MainLayout>
-	<section class="flex w-full min-h-screen justify-between items-center z-10 bg-transparent mt-12 px-12 md:px-20 xl:px-24">
-		<div id="grid-parent" class="h-screen w-full py-32 grid grid-cols-6 grid-rows-3 gap-4">
+	<section class="flex w-full min-h-screen justify-between items-center z-10 bg-transparent px-12 md:px-20 xl:px-24">
+		<div id="grid-parent" class="h-screen w-full pt-32 pb-20 grid grid-cols-6 grid-rows-3 gap-4">
 			<div id="images" class="flex row-start-1 col-start-1 col-span-2 row-span-3 justify-center items-center z-10 rounded-lg bg-gray-500">
+				<!-- Carrousel de Imagenes -->
 				Images
 			</div>
 			<div id="animated" class="flex row-start-1 col-start-2 col-span-2 justify-center items-center bg-blue-400">
 				Gif Animated
 			</div>
 			<div id="project" class="flex row-start-2 col-start-3 row-span-2 col-span-3 justify-center items-center rounded-lg bg-amber-400">
+				<!-- Listado de proyectos realizados, de aqui se saca un modal -->
 				Proyectos
 			</div>
 			<div id="about" class="flex row-start-1 col-start-4 row-span-1 col-span-3 justify-center items-center rounded-lg bg-lime-200">
+				<!-- Modal de about ME -->
 				About with Button
 			</div>
 			<div class="flex row-start-2 col-start-6 row-span-2 justify-center items-center rounded-lg bg-ocean-green">
