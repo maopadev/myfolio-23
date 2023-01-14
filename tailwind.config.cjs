@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		'./src/**/*.{astro,html,js,jsx,svelte,vue}'
+		'./src/**/*.{astro,html,js,jsx,svelte,vue}',
+    './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
 	],
 	enabled: process.env.NODE_ENV === 'production',
 	safeList: [],
@@ -40,5 +41,7 @@ module.exports = {
       }
     },
 	},
-	plugins: [],
+	plugins: [
+    require('flowbite/plugin')
+  ],
 }
