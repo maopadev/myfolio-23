@@ -1,8 +1,7 @@
 
 <!-- Home Islands -->
-<section id="home" class="flex w-full min-h-screen justify-between items-center z-10 px-12 md:px-20 xl:px-24">
-    <div id="container" class="flex w-full h-full items-center justify-center py-24">
-        <div class="absolute left-24 flex flex-wrap w-1/4 h-4/5 bg-red-600 rounded z-0">
+<section id="home" class="flex flex-col max-w-screen-xl min-h-screen justify-center items-center m-auto z-10 bg-transparent">
+        <div class="flex flex-wrap w-full h-4/5 bg-red-600 rounded z-0">
             <div>
                 <h1>
                     20{ getCurrentYear() }
@@ -13,15 +12,14 @@
                 Portfolio
             </h1>
         </div>
-        <div class="absolute flex max-w-lg h-4/5 bg-papaya">
+        <div class="">
             Image parecida a Notion
         </div>
-        <div id="right" class="absolute right-24 flex w-1/3 h-4/5 z-0">
+        <div id="right" class="">
             <h1>A Developer who catch your eyes</h1>
         </div>
-    </div>
     <!-- Cosos que sé -->
-    <div class="absolute w-full bottom-10 right-24 gap-6">
+    <div class="">
         <p>Java EE</p>
         <p>React</p>
         <p>Svelte</p>

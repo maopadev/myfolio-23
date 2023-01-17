@@ -1,11 +1,12 @@
 
 <!-- Navigation Component -->
-<header class="sticky w-screen h-12 flex top-6 lg:top-20 justify-between items-center p-4 z-10 bg-transparent px-12 md:px-20 xl:px-24">
+<header class="sticky flex max-w-screen-xl pt-8 top-0 justify-between items-center m-auto p-4 z-10 
+	bg-transparent border-b-4 border-b-bigstone backdrop-blur-xl">
 	<!-- Information -->
 	<div id="corner-left" class="flex items-center justify-center w-auto h-12 gap-24 z-50">
 		<div class="flex items-center justify-center h-12 lg:h-16 gap-4">
-			<a class="w-12 lg:w-16" href='/'>
-				<img src={logo} alt="Go home" />
+			<a class="w-12 h-12" href='/'>
+				<img src={ logo } alt="" class="text-xs text-gray-300"/>
 			</a>
 		</div>
 		<div bind:this={y} class='{y <= 43 ? 'inline-flex' : 'hidden'} lg:inline-flex gap-4'> 

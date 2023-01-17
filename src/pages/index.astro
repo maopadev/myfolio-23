@@ -9,9 +9,12 @@ import Contact from '@islands/contact.svelte';
 ---
 
 <MainLayout>
-	<Home client:visible />
-	<About client:visible />
-	<Contact client:visible />
+	<div class="w-screen h-screen bg-transparent z-10 px-4 overflow-visible overflow-y-scroll">
+		<Home client:visible />
+		<About client:visible />
+		<Contact client:visible />
+	</div>
+	
 	<!-- <section class="flex w-full min-h-screen justify-between items-center z-10 bg-transparent px-12 md:px-20 xl:px-24">
 		<div id="grid-parent" class="h-screen w-full pt-32 pb-20 grid grid-cols-6 grid-rows-3 gap-4">
 			<div id="images" class="flex row-start-1 col-start-1 col-span-2 row-span-3 justify-center items-center z-10 rounded-lg bg-gray-500">

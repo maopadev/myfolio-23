@@ -1,6 +1,6 @@
 
 <!-- About Me Island -->
-<section id="about" class="flex w-full min-h-screen justify-between items-center z-10 px-12 md:px-20 xl:px-24">
+<section id="about" class="flex flex-col max-w-screen-xl min-h-screen justify-center items-center m-auto p-4 z-10 bg-transparent">
     <button class=""
         on:click={() => console.log('holi')}>
         <div>
