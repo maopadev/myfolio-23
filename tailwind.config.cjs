@@ -11,6 +11,9 @@ module.exports = {
 		letterSpacing: {
       zero: "-0.07em"
     },
+    fontFamily: {
+      tusker: ['Tusker Grotesk', 'display']
+    },
 		extend: {
       animation: {
         blob: "blob 7s infinite",

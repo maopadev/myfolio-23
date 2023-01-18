@@ -6,7 +6,6 @@
       "@layouts/*": ["src/layouts/*"],
       "@styles/*": ["src/assets/styles/*"],
       "@images/*": ["src/assets/images/*"],
-      "@fonts/*": ["src/assets/fonts/*"],
       "@islands/*": ["src/islands/*"],
       "@scripts/*": ["src/scripts/*"]
     }
