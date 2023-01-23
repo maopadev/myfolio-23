@@ -21,12 +21,15 @@
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
     "astro-eslint-parser": "^0.9.4",
+    "autoprefixer": "^10.4.13",
     "classnames": "^2.3.2",
+    "cssnano": "^5.1.14",
     "eslint": "^8.31.0",
     "flowbite": "^1.6.2",
     "flowbite-svelte": "^0.29.10",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "postcss": "^8.4.21",
     "sass": "^1.57.1",
     "svelte-eslint-parser": "^0.22.3"
   }
