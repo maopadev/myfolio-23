@@ -22,7 +22,6 @@
             &nbsp; especializado en Java EE y Servicios REST API.
         </h1>
     </div>
-    <!-- Cosos que sé -->
     <div id="hard-skills" class="relative bottom-12 md:right-10 xl:right-96 flex flex-row gap-6 justify-between items-center
         dark:text-alabaster-back pointer-events-none dark:{{in:fade}} dark:{{out:fade}}">
         <h1 class="font-bold">Hard Skills</h1> →

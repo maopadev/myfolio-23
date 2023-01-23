@@ -32,3 +32,13 @@ body {
 	background-attachment: fixed;
 	background-size: 100vw 100vh;
 }
+
+.disable-scrollbars {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE 10+ */
+	&::-webkit-scrollbar {
+		background: transparent; /* Chrome/Safari/Webkit */
+		width: 0px;
+	}
+}
+  

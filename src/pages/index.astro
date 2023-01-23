@@ -1,18 +1,26 @@
 ---
-// Layout Imports
+// Layouts Imports
 import MainLayout from '@layouts/main.astro'
 
 // > Islands Imports
 import Home from '@islands/home.svelte'
 import About from '@islands/about.svelte'
-import Contact from '@islands/contact.svelte';
+import Contact from '@islands/contact.svelte'
+
+// > Components Imports
+import Footer from '@components/footer.svelte'
+
+import '@styles/app.scss'
 ---
 
 <MainLayout>
-	<div class="w-screen h-screen bg-transparent z-10 px-4 overflow-visible overflow-y-scroll">
+	<div id="content" class="w-screen h-screen bg-transparent z-10 px-4 overflow-visible overflow-y-scroll disable-scrollbars">
 		<Home client:visible />
 		<About client:visible />
 		<Contact client:visible />
+		<div id="container-footer">
+			<Footer client:load />
+		</div>
 	</div>
 	
 	<!-- <section class="flex w-full min-h-screen justify-between items-center z-10 bg-transparent px-12 md:px-20 xl:px-24">

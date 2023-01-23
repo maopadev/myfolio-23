@@ -1,6 +1,6 @@
 
 <!-- Footer Component -->
-<section id="footer" class="flex w-screen justify-between items-center z-10 bg-transparent pb-8 px-12 md:px-20 xl:px-24">
+<section id="footer" class="flex flex-col max-w-screen-xl h-full justify-center items-center mx-auto z-10 bg-transparent gap-24">
     <Footer>
       <FooterCopyright href="/" by="flowbite™" year={2022} />
       <FooterLinkGroup ulClass="flex flex-wrap items-center justify-center text-sm text-gray-500 dark:text-gray-400">
