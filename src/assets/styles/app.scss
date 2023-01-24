@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'cover.scss';
+@import 'scrollbar.scss';
+
 
 @font-face {
 	font-family: "Tusker Grotesk";
@@ -14,9 +17,6 @@
 
 :root {
 	--font-body: 'Rubik', sans-serif;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
 	--color-theme-1: #096162;
 	--color-theme-2: #4075a6;
 	--color-text: rgba(0, 0, 0, 0.7);
@@ -32,13 +32,3 @@ body {
 	background-attachment: fixed;
 	background-size: 100vw 100vh;
 }
-
-.disable-scrollbars {
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none;  /* IE 10+ */
-	&::-webkit-scrollbar {
-		background: transparent; /* Chrome/Safari/Webkit */
-		width: 0px;
-	}
-}
-  

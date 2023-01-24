@@ -1,16 +1,16 @@
 
 <!-- Navigation Component -->
-<header class="sticky flex max-w-screen-xl pt-8 top-0 justify-between items-center m-auto p-4 z-10 
+<header class="sticky flex max-w-screen-xl pt-8 xl:bottom-0 justify-between items-center m-auto p-4 px-12 z-10 
 	bg-transparent border-b-4 border-b-bigstone dark:border-b-black backdrop-blur-xl">
 	<!-- Information -->
 	<div id="corner-left" class="flex items-center justify-center w-auto h-12 gap-24 z-50">
 		<div class="flex items-center justify-center h-12 lg:h-16 gap-4">
 			<a class="w-12 h-12" href='/'>
-				<img src={ logo } alt="" class="text-xs text-alabaster-back dark:text-bigstone"/>
+				<img src={ logo } alt="" class="text-xs text-cultured dark:text-bigstone"/>
 			</a>
 		</div>
-		<div bind:this={y} class='{y <= 43 ? 'inline-flex' : 'hidden'} lg:inline-flex gap-4
-			dark:text-gray-600 dark:text-opacity-80'> 
+		<div class="hidden xl:inline-flex gap-4
+			dark:text-gray-600 dark:text-opacity-80"> 
 			<h1 class=" font-bold">Location</h1>
 			{coordinates}
 		</div>
@@ -20,7 +20,12 @@
 		-> Implementar un FOREACH para todas las redes sociales a mostrar
 		-> Mostrar el modo oscuro
 	-->
-	<div id="corner-right" class="inline-flex h-12 w-auto gap-8 align-middle items-center ">
+	<div id="corner-right" class="hidden xl:inline-flex h-12 w-auto gap-8 align-middle items-center ">
+		<a href="/about">
+			<button>
+				Sobre mi
+			</button>
+		</a>
 		<DarkMode class="" />
 	</div>
 </header>

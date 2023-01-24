@@ -6,22 +6,33 @@ import Background from '@components/background.svelte'
 // > Styles SCSS MAIN
 import '@styles/app.scss'
 
+
+
 ---
 <!-- Main Layout -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
-	<body class="flex flex-col w-screen min-h-screen overflow-x-hidden overflow-y-hidden 
-		justify-center items-center bg-cultured dark:bg-bigstone">
+	<body data-barba="wrapper" class="flex flex-col w-screen min-h-screen overflow-x-hidden overflow-y-hidden 
+		justify-center items-center bg-forest dark:bg-bigstone">
 		<Background client:visible />
+		<div class="load-container">
+            <div class="loading-screen bg-bigstone dark:bg-ocean-green flex w-screen min-h-screen overflow-hidden justify-center items-center">
+				<h1 id="text-loading" class="text-3xl text-bold font-tusker uppercase overstroke">Se coloca el logo</h1>
+			</div>
+        </div>
 		<main>
 			<Navigation client:visible />
-			<slot />
+			<div id="layout" data-barba="container" class="w-screen h-screen bg-transparent z-10 px-4 overflow-visible overflow-y-scroll custom-scroll">
+				<slot />
+			</div>
 		</main>
+		<!-- Barba JS Init -->
+		<script src="../scripts/barba.js" />
 	</body>
 </html>
