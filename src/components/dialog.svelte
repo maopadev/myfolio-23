@@ -1,5 +1,0 @@
-
-<!-- Dialog Component -->
-<div>
-    
-</div>

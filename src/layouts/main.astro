@@ -1,12 +1,11 @@
 ---
 // > Components Imports
-import Navigation from '@components/navigation.svelte'
+import Navigation from '@components/navbar/index.svelte'
 import Background from '@components/background.svelte'
+import Loader from '@components/loader.svelte'
 
 // > Styles SCSS MAIN
 import '@styles/app.scss'
-
-
 
 ---
 <!-- Main Layout -->
@@ -19,16 +18,13 @@ import '@styles/app.scss'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
 	<body data-barba="wrapper" class="flex flex-col w-screen min-h-screen overflow-x-hidden overflow-y-hidden 
-		justify-center items-center bg-forest dark:bg-bigstone">
+		justify-center items-center bg-ocean-green dark:bg-bigstone">
 		<Background client:visible />
-		<div class="load-container">
-            <div class="loading-screen bg-bigstone dark:bg-ocean-green flex w-screen min-h-screen overflow-hidden justify-center items-center">
-				<h1 id="text-loading" class="text-3xl text-bold font-tusker uppercase overstroke">Se coloca el logo</h1>
-			</div>
-        </div>
+		<Loader client:load />
 		<main>
 			<Navigation client:visible />
-			<div id="layout" data-barba="container" class="w-screen h-screen bg-transparent z-10 px-4 overflow-visible overflow-y-scroll custom-scroll">
+			<h1 class="absolute flex left-0 top-0">{ Astro.url.pathname }</h1>
+			<div id="layout" data-barba="container" class="max-w-screen-xl h-screen bg-transparent z-10 px-4 overflow-hidden">
 				<slot />
 			</div>
 		</main>
