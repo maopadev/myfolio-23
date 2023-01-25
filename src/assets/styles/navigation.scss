@@ -31,3 +31,8 @@ nav a {
 a:hover {
     color: var(--color-theme-1);
 }
+
+.outline-text {
+    -webkit-text-stroke: 3px #000;
+    color: transparent !important;
+}
