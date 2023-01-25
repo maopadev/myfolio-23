@@ -36,11 +36,11 @@ module.exports = {
       },
 			colors: {
         'bigstone': "#080808",
-        'ocean-green': '#009370',
-        'forest': '#01503e',
-        'ocean-dark': '#098064',
-        'cultured': '#f0eee8',
-				'papaya': '#f76e39',
+        'lime': '#dfff00',
+        'tangerine': '#ffcd00',
+        'ocean-green': '#009170',
+        'ocean-fluro': '#00ff9f',
+        'cultured': '#f0eee8'
       }
     },
 	},
