@@ -1,12 +1,19 @@
 ---
 
 // > Layouts Imports
-import Layout from "@layouts/main.astro";
+import Layout from '@layouts/main.astro'
+
+let hardSkills = [
+    { id: 'java', name: 'Java EE', exp: '3 years', border: 'border-yellow-700', color: ''},
+    { id: 'svelte', name: 'Svelte', exp: '2 years', border: 'border-papaya', color: '' },
+    { id: 'db', name: 'Consultas SQL', exp: '', border: 'border-slate-back', color: '' }
+]
 
 ---
 
 <Layout data-barba-namespace="about-section">
-    <div id="about" class="content flex flex-col max-w-screen-xl h-screen justify-center items-center mx-auto animate-this z-10 bg-transparent gap-24 dark:text-cultured">
+    <div id="about" class="content flex flex-col min-w-screen h-screen justify-center items-center mx-auto animate-this 
+        z-10 bg-transparent gap-24 overflow-y-visible dark:text-cultured">
         <h1>Sobre Mi</h1>
     </div>
 </Layout>
