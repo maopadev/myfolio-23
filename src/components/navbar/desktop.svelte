@@ -1,11 +1,11 @@
 
 <!-- Desktop Navigation Bar -->
-<div id="corner-left" class="flex items-center justify-center min-w-screen h-auto gap-24 z-50">
+<div id="corner-left" class="flex items-center justify-center min-w-screen h-auto gap-24 z-50 transition-all ease-in-out">
     <div class="flex flex-col items-start justify-center gap-1">
-        <a id="home-link" href="/" class="flex-col flex justify-center items-start p-2 bg-ocean-green w-full px-6 rounded-md">
+        <a id="home-link" href="/" class="flex-col flex justify-center items-start p-2 bg-ocean-green w-full px-6 rounded-md duration-300">
             <img src={ logo } alt="" class="text-xs gap-4 w-16 h-16 text-ocean-green dark:text-bigstone"/>
         </a>
-        <div id="" class="flex flex-row justify-center items-center align-middle pt-4 gap-x-12">
+        <div id="" class="flex flex-row justify-center items-center align-middle pt-4 gap-x-12 duration-300">
             <div class="flex flex-col justify-end items-start gap-y-1">
                 <h1 class="font-bold text-3xl">
                     Full Stack Developer
@@ -20,11 +20,11 @@
                 </p>
             </div>
             <div class="flex flex-col justify-end items-start align-middle pt-1 gap-y-1">
-                <div class="hidden xl:inline-flex gap-x-4 text-gray-900 dark:text-gray-400 dark:text-opacity-90"> 
-                    <h1 class="dark:text-gray-300 font-bold">Location</h1>
+                <div class="hidden xl:inline-flex gap-x-4 text-gray-900 dark:text-gray-400 dark:text-opacity-90 duration-300"> 
+                    <h1 class="dark:text-gray-300 font-bold duration-150">Location</h1>
                     {coordinates}
                 </div>
-                <button id="" class="transition ease-in-out delay-150 hover:text-ocean-fluro hover:translate-x-1 duration-300">
+                <button id="email-button" class="hover:text-ocean-fluro hover:translate-x-1 duration-300">
                     mrtg.dev@outlook.com
                 </button>
             </div>
@@ -35,14 +35,14 @@
     <ul class="flex flex-col justify-center items-end align-middle">
         {#each pages as page }
             <li>
-                <a class="inline-flex gap-x-4 justify-center items-center align-middle hover:text-ocean-fluro hover:font-bold transition-all duration-150" href={ page.href }>
+                <a class="inline-flex gap-x-4 justify-center items-center align-middle hover:text-ocean-fluro hover:font-bold duration-300" href={ page.href }>
                     <p id="link-{ page.name }" class="font-semibold ">{ page.name }</p>
                     <p id="id-{ page.id }">{ page.id }</p>
                 </a>
             </li>
         {/each}
     </ul>
-    <DarkMode class="dark:text-cultured hover:bg-transparent focus:bg-transparent" />
+    <DarkMode class="dark:text-cultured hover:bg-transparent focus:bg-transparent duration-300" />
 </div>
 
 <script lang="js">
