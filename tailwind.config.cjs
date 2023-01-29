@@ -36,8 +36,8 @@ module.exports = {
       },
 			colors: {
         'bigstone': "#080808",
-        'lime': '#dfff00',
-        'tangerine': '#ffcd00',
+        'E8EEF0': '#E8EEF0',
+        'E8F0EE': '#E8F0EE',
         'ocean-green': '#009170',
         'ocean-fluro': '#00ff9f',
         'cultured': '#f0eee8'

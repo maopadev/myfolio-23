@@ -2,14 +2,12 @@
 // Layouts Imports
 import Layout from '@layouts/main.astro'
 
-// > Scripts Import
-import { getCurrentYear } from '@scripts/date.js'
-
 
 ---
 
 <Layout data-barba-namespace="home-section">
-	<div class="flex flex-col max-w-screen-xl h-full justify-center items-center mx-auto z-10 animate-this bg-transparent gap-24 force-overflow">
+	<div class="flex flex-col max-w-screen-xl h-full justify-center items-center mx-auto z-10 animate-this bg-transparent gap-24 force-overflow overflow-clip">
+		<h1 class="text-6xl font-bold text-center text-white" id="name">Jorge Luis</h1>
 		<!--
 			SE UBICARÁN LOS PROYECTOS
 			-> Con enlace a un dialog sacando la información de estos,
@@ -20,12 +18,3 @@ import { getCurrentYear } from '@scripts/date.js'
 		</ul>
 	</div>
 </Layout>
-
-<style lang="scss">
-
-#name {
-    -webkit-text-stroke: 3px #000;
-    color: transparent !important;
-}
-
-</style>

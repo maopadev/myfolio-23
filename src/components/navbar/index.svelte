@@ -20,4 +20,4 @@ import Desktop from './desktop.svelte'
 
 import '@styles/navigation.scss'
 
-</script> 
+</script>
