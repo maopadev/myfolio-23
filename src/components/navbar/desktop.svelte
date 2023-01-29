@@ -31,7 +31,7 @@
         </div>
     </div>
 </div>
-<div id="corner-right" class="hidden xl:inline-flex h-12 w-auto gap-8 align-middle items-center ">
+<div id="corner-right" class="hidden xl:inline-flex h-12 w-auto gap-8 align-middle items-center z-20">
     <ul class="flex flex-col justify-center items-end align-middle">
         {#each pages as page }
             <li>

@@ -2,19 +2,20 @@
 // Layouts Imports
 import Layout from '@layouts/main.astro'
 
+// Components Imports
+import ListProjects from '@components/list/projects.svelte'
 
 ---
 
 <Layout data-barba-namespace="home-section">
-	<div class="flex flex-col max-w-screen-xl h-full justify-center items-center mx-auto z-10 animate-this bg-transparent gap-24 force-overflow overflow-clip">
-		<h1 class="text-6xl font-bold text-center text-white" id="name">Jorge Luis</h1>
+	<div class="flex flex-col max-w-screen-xl justify-center items-center mx-auto z-0 animate-this bg-transparent gap-24">
+		<div class="flex max-w-screen justify-end items-end overflow-hidden min-h-screen py-12">
+			<ListProjects client:visible />
+		</div>
 		<!--
 			SE UBICARÁN LOS PROYECTOS
 			-> Con enlace a un dialog sacando la información de estos,
 			-> Revisar si es factible hacer scrapping para actualizar la información
 		-->
-		<ul>
-			<li></li>
-		</ul>
 	</div>
 </Layout>
