@@ -1,6 +1,6 @@
 ---
 // > Components Imports
-import Navigation from '@components/navbar/index.svelte'
+import Navigation from '@components/navbar.svelte'
 import Background from '@components/background.svelte'
 import Loader from '@components/loader.svelte'
 
@@ -17,14 +17,13 @@ import '@styles/app.scss'
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
-	<body data-barba="wrapper" class="flex flex-col w-screen min-h-screen overflow-x-hidden overflow-y-hidden 
-		justify-center items-center bg-cultured dark:bg-bigstone">
+	<body data-barba="wrapper" class="flex flex-col w-screen h-screen overflow-x-hidden justify-center items-center bg-bigstone">
 		<Background client:visible />
 		<Loader client:load />
 		<main>
 			<Navigation client:visible />
-			<h1 class="absolute flex left-0 top-0">{ Astro.url.pathname }</h1>
-			<div id="layout" data-barba="container" class="max-w-screen-xl h-screen bg-transparent z-10 px-4 overflow-hidden">
+			<h1 class="absolute flex left-0 top-0 text-white">{ Astro.url.pathname }</h1>
+			<div id="layout" data-barba="container" class="relative m-auto max-w-screen-xl h-screen bg-transparent z-10 justify-center items-center">
 				<slot />
 			</div>
 		</main>

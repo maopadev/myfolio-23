@@ -1,10 +1,11 @@
 <!-- Background Blur and Noise -->
 <div class="w-screen min-h-screen flex fixed items-center justify-center -z-10 bg-transparent noise">
-  <div class="relative w-full max-w-full max-h-full">
-		<div class="flex absolute top-0 -rigth-28 sphereThree bg- rounded-full filter
-      blur-3xl opacity-20 animate-blob animation-delay-2000" />
-    <div class="flex absolute bottom-0 -rigth-36 sphereOne bg-black rounded-full filter
-      blur-3xl opacity-10 animate-blob animation-delay-4000" />
+  <div class="container relative w-full max-w-full max-h-full z-0">
+		<div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>    
   </div>
 </div>
 

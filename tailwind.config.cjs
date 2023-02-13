@@ -12,7 +12,7 @@ module.exports = {
       zero: "-0.07em"
     },
     fontFamily: {
-      tusker: ['Tusker Grotesk', 'display']
+      'neue-montreal': ['Neue Montreal', 'display']
     },
 		extend: {
       animation: {
@@ -36,8 +36,9 @@ module.exports = {
       },
 			colors: {
         'bigstone': "#080808",
-        'slate-ferro': '#37454D',
-        'clear-bigstone': '#3B3B3B',
+        'clear-bigstone': '#202020',
+        'golden-poppy': '#FEC400',
+        'yellow-dodie': '#FFFE54',
         'ocean-green': '#009170',
         'ocean-fluro': '#00ff9f',
         'cultured': '#f0eee8'

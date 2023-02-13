@@ -8,14 +8,22 @@ import ListProjects from '@components/list/projects.svelte'
 ---
 
 <Layout data-barba-namespace="home-section">
-	<div class="flex flex-col max-w-screen-xl justify-center items-center mx-auto z-0 animate-this bg-transparent gap-24">
-		<div class="flex max-w-screen justify-end items-end overflow-hidden min-h-screen py-12">
-			<ListProjects client:visible />
-		</div>
+	<section id="" class="flex flex-col w-full min-h-screen justify-center items-center z-20 animate-this bg-transparent lg:gap-12 text-cultured">
+		<p class="text-yellow-dodie">Hello there!</p>
+		<h1 class=" font-neue-montreal uppercase">Mario Ortega<br>Al habla</h1>
+		<h1>Full Stack Developer </h1>
 		<!--
 			SE UBICARÁN LOS PROYECTOS
 			-> Con enlace a un dialog sacando la información de estos,
 			-> Revisar si es factible hacer scrapping para actualizar la información
 		-->
-	</div>
+	</section>
+	<section id="home-view" class="flex flex-col w-full min-h-screen justify-center items-center animate-this bg-transparent lg:gap-12 z-20">
+		<h1 class=" text-golden-poppy">Home View</h1>
+		<!--
+			SE UBICARÁN LOS PROYECTOS
+			-> Con enlace a un dialog sacando la información de estos,
+			-> Revisar si es factible hacer scrapping para actualizar la información
+		-->
+	</section>
 </Layout>

@@ -1,9 +1,10 @@
 
 <!-- Component - List of Projects -->
-<ul class="block z-0 w-screen min-h-screen gap-8 overflow-y-auto justify-center items-end align-middle px-12">
+<ul class="block z-0 w-screen min-h-screen gap-8 overflow-y-clip justify-center items-end align-middle px-12">
     {#each projects as project }
-        <li id="" class="flex w-screen h-auto leading-tight">
-            <a href="" class="flex flex-wrap font-tusker uppercase opacity-100 text-right justify-center items-center">
+        <li id="" class="flex w-full h-auto leading-tight justify-end items-center text-7xl">
+            <a href="" class="flex flex-wrap font-tusker uppercase opacity-100 text-right justify-center items-center outline-font 
+                transition-all ease-in-out duration-300">
                 <h1 class="flex w-full text-right">
                     {#if project.name.length == 2}
                         { project.name[0] }
@@ -64,7 +65,19 @@ let projects = [
 <style lang="scss">
 
 li > a {
-    font-size: 11.5rem;
+    font-size: 8.5rem;
+}
+
+.outline-font {
+    color: transparent !important;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #37454D;
+}
+
+.outline-font:hover {
+    color: #009170 !important;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: transparent !important;
 }
 
 </style>
