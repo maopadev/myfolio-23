@@ -1,6 +1,6 @@
 
 
-<div class="inline-flex w-full h-auto justify-center md:justify-start items-center align-middle gap-2">
+<div class="inline-flex flex-wrap w-full h-auto justify-center md:justify-start items-center align-middle gap-2">
     {#each tools as tool}
         <a id={ tool.id } class="flex flex-wrap text-xs px-2 p-2 border-2 border-gray-700 justify-center items-center align-middle" 
                 href={ tool.link }>
