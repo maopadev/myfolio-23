@@ -12,7 +12,7 @@ module.exports = {
       zero: "-0.07em"
     },
     fontFamily: {
-      'neue-montreal': ['Neue Montreal', 'display']
+      neueBitPro: ['Neue Bit Pro', 'sans-serif'],
     },
 		extend: {
       animation: {
@@ -39,7 +39,6 @@ module.exports = {
         'clear-bigstone': '#202020',
         'golden-poppy': '#FEC400',
         'yellow-dodie': '#FFFE54',
-        'ocean-green': '#009170',
         'ocean-fluro': '#00ff9f',
         'cultured': '#f0eee8'
       }

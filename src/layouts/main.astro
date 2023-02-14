@@ -21,9 +21,9 @@ import '@styles/app.scss'
 		<Background client:visible />
 		<Loader client:load />
 		<main>
-			<Navigation client:visible />
-			<h1 class="absolute flex left-0 top-0 text-white">{ Astro.url.pathname }</h1>
-			<div id="layout" data-barba="container" class="relative m-auto max-w-screen-xl h-screen bg-transparent z-10 justify-center items-center">
+			<!--<Navigation client:visible />-->
+			<h1 class="absolute flex left-24 top-14 font-neueBitPro text-slate-400">{ Astro.url.pathname }</h1>
+			<div id="layout" data-barba="container" class="relative m-auto max-w-screen-2xl h-screen bg-transparent z-10 justify-center items-center">
 				<slot />
 			</div>
 		</main>
