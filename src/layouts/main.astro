@@ -13,7 +13,7 @@ import '@styles/app.scss'
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=0.5,maximum-scale=0.5,minimum-scale=0.5,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
@@ -21,9 +21,9 @@ import '@styles/app.scss'
 		<Background client:visible />
 		<Loader client:load />
 		<main>
-			<!--<Navigation client:visible />-->
+			<Navigation client:visible />
 			<h1 class="absolute flex left-24 top-14 font-neueBitPro text-slate-400">{ Astro.url.pathname }</h1>
-			<div id="layout" data-barba="container" class="container relative m-auto max-w-screen-xl h-screen bg-transparent z-10 justify-center items-center px-12">
+			<div id="layout" data-barba="container" class="container relative m-auto max-w-screen-xl h-8/12 bg-transparent z-10 justify-center items-center px-12">
 				<slot />
 			</div>
 		</main>
