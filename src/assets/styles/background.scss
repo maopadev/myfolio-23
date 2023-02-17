@@ -7,10 +7,10 @@
 	animation: grain 8s steps(10) infinite;
 	position: fixed;
 	height: 400%;
-    left: -50%;
-    position: fixed;
-    top: -100%;
-    width: 230%;
+  left: -50%;
+  position: fixed;
+  top: -100%;
+  width: 230%;
 	content: '';
     background: url('../images/noise.gif');
 	/* you can control opacity of noise  */
@@ -19,58 +19,52 @@
 	pointer-events: none;
 }
 
-.lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  margin: auto;
-  width: 90vw;
+// > Perspectives Plane
+.wrap-perspective {
+  perspective: 800px;
+  perspective-origin: 90% 150%;  
 }
-  
-.line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
 
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 15vh;
-    width: 100%;
-    top: -50%;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-    animation: drop 7s 0s infinite;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+.top-plane {
+  width: 200%;
+  height: 130%;
+  position: absolute;
+  bottom: -30%;
+  left: -50%;
+  background-image: -webkit-linear-gradient(#1d1d1d 2px, transparent 2px), -webkit-linear-gradient(left, #1a1a1a 2px, transparent 2px);
+  background-size: 100px 100px,100px 100px;
+  background-position: -1px -1px,-1px -1px;
+  transform: rotateX(85deg);
+  animation: planeMoveTop 2s infinite linear;
+}
+
+.bottom-plane {
+  @extend .top-plane;
+  transform: rotateX(-85deg);
+  top: -30%;
+  animation: planeMoveBot 2s infinite linear;
+}
+
+@keyframes planeMoveTop {
+  from {
+    background-position: 0px -100px,0px 0px;
   }
-  
-  &:nth-child(1) {
-    margin-left: -25%;
-    &::after {
-      animation-delay: 2s;
-	}
-  }
-  
-  &:nth-child(3) {
-    margin-left: 25%;
-    &::after {
-      animation-delay: 2.5s;
-	}
+  to {
+    background-position: 0px 0px, 100px 0px;
   }
 }
-  
-    
-@keyframes drop {
-  0% {
-    top: -50%; }
-  100% {
-    top: 110%; }
+
+@keyframes planeMoveBot {
+  from {
+    background-position: 0px 0px,0px 0px;
+  }
+  to {
+    background-position: 0px -100px, 100px 0px;
+  }
+}
+
+@media (max-height: 350px) {
+  .wrap-perspective {
+    perspective: 360px - 150;
+  }
 }
