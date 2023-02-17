@@ -1,6 +1,6 @@
 
 <!-- Navigation Component -->
-<navigation class="sticky flex max-w-screen-xl pt-8 top-0 justify-between items-center m-auto p-4 px-12 z-20 
+<navigation class="fixed flex w-screen top-0 justify-between items-center m-auto p-2 px-12 z-20 
 		bg-transparent border-b-4 border-b-bigstone dark:border-b-black backdrop-blur-xl">
 	<div id="corner-left" class="flex items-center justify-center w-screen h-12 gap-24 z-50">
 		<div class="flex items-center justify-center h-12 lg:h-16 gap-4">
