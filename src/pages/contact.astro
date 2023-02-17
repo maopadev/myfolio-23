@@ -1,0 +1,14 @@
+---
+// > Layouts Imports
+import Layout from '@layouts/main.astro'
+
+// > Components Imports
+import ContactForm from '@components/ContactComponent.svelte'
+---
+
+<Layout data-barba-namespace="about-section">
+    <div id="about" class="content flex flex-col min-w-screen h-screen justify-center items-center mx-auto animate-this 
+        z-5 bg-transparent gap-24 overflow-y-visible dark:text-cultured">
+        <ContactForm client:load />
+    </div>
+</Layout>
