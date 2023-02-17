@@ -3,6 +3,7 @@
 import Navigation from '@components/navbar.svelte'
 import Background from '@components/background.svelte'
 import Loader from '@components/loader.svelte'
+import Footer from '@components/footer.svelte'
 
 // > Styles SCSS MAIN
 import '@styles/app.scss'
@@ -23,15 +24,12 @@ import '@styles/app.scss'
 		<main>
 			<Navigation client:visible />
 			<h1 class="absolute flex left-24 top-14 font-neueBitPro text-slate-400">{ Astro.url.pathname }</h1>
-			<div id="layout" data-barba="container" class="container relative m-auto max-w-screen-xl h-8/12 bg-transparent z-10 justify-center items-center px-4">
+			<div id="layout" data-barba="container" class="container relative m-auto max-w-screen-xl h-full bg-transparent z-5 justify-center items-center text-yellow-dodie">
 				<slot />
+				<Footer client:visible />
 			</div>
 		</main>
 		<!-- Barba JS Init -->
 		<script src="../scripts/barba.js" />
 	</body>
 </html>
-
-<style lang="scss">
-
-</style>
