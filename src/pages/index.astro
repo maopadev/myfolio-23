@@ -6,46 +6,57 @@ import Layout from '@layouts/main.astro'
 import ListTools from '@components/list/tools.svelte'
 import ListProjects from '@components/list/projects.svelte'
 import ContactForm from '@components/contactForm.svelte'
+import { getCurrentYear } from '@scripts/date';
+
+let currentYear = getCurrentYear();
 
 ---
 
 <Layout data-barba-namespace="home-section">
-	<section class="container flex flex-col w-full min-h-screen px-6 md:pt-0 justify-center items-center align-middle z-5 animate-this bg-transparent text-cultured gap-16 lg:gap-0 not-selectable">
-		<a href="/about" class="absolute top-12 right-0 w-96 h-14 border-green-400 border-2 justify-center items-center pointer-events-auto z-20">
-			About
-		</a>
-		<h1 id="salute" class="absolute top-40 left-0 flex-col justify-center items-center font-neueBitPro size-subtitle text-left uppercase flex-wrap">
-			Hello There!
-			<br>
-			<strong class="text-cultured hover:text-ocean-fluro size-title transition-all duration-500">
-				Mario Ortega<br>Al Habla
-			</strong>
-		</h1>
-		<!-- Nuevo DIV -->
-		<h1 id="position" class="absolute bottom-72 right-0 w-96 flex-col justify-center items-center font-neueBitPro size-subtitle text-right uppercase flex-wrap">
-			Full Stack Developer, Creative and Tech Enthusiast.
-		</h1>
-		<div id="exp-indicator" class="container lg:absolute flex flex-col w-1/3 justify-center h-38 items-center align-middle flex-wrap lg:bottom-24 lg:left-0 gap-4">
-			<div class="w-full h-full md:px-0 text-center md:text-left text-sm md:text-base transition-all duration-150">
+	<section class="container flex flex-col w-full min-h-screen px-6 justify-center items-center align-middle z-5 animate-this bg-transparent text-cultured 
+		 not-selectable">
+		<div id="salute" class="flex flex-col justify-center items-center gap-16">
+			<h1 class="font-neueBitPro size-subtitle text-center uppercase flex-wrap gap-4">
+				Hello There!
+				<br>
+				<strong class="text-cultured hover:text-ocean-fluro leading-none size-title transition-all duration-500">
+					Mario Ortega<br>Al Habla
+				</strong>
+			</h1>
+			<div class="container lg:absolute flex flex-col lg:flex-row w-full h-auto justify-between items-center align-middle bottom-32 pt-12 lg:pt-0 bg-transparent">
+				<div class="flex flex-col p-4 text-slate-600 opacity-20 justify-center items-center font-neueBitPro uppercase 
+					 size-subtitle hover:translate-x-2 hover:-translate-y-4 transition-all duration-300 z-0">
+					<h1>{ currentYear }↗</h1>
+				</div>
+				<a href="/about" class="flex flex-col w-96 h-auto p-2 px-2 border-b-gray-600 hover:border-b-yellow-dodie
+					border-b-2 justify-center items-center pointer-events-auto transition-all duration-500 hover:translate-x-2 z-20">
+					<h1 class="w-full font-neueBitPro text-center text-3xl uppercase">Explora mi perfil →</h1>
+				</a>
+				<div id="scroll" class="flex w-full md:w-3/5 lg:w-2/5 h-24 justify-end items-center align-middle flex-wrap 
+					lg:bottom-20 lg:right-0 px-4 gap-4 transition-all duration-150 z-0">
+					<h1 class=" font-neueBitPro text-2xl text-center uppercase text-gray-600">Scroll to Explore ↴</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="info" class="container flex flex-col w-full h-auto py-20 justify-center items-center align-middle flex-wrap animate-this 
+		 bg-transparent text-cultured not-selectable">
+		<div id="position" class="relative flex left-0 top-0 flex-col w-full justify-center items-start">
+			<h1 class="font-neueBitPro size-subtitle text-left uppercase flex-wrap w-2/3">Full Stack Developer, Creative and Tech Enthusiast.</h1>
+		</div>
+		<div id="exp-indicator" class="relative flex flex-col w-full justify-end h-auto items-end align-middle flex-wrap bottom-0 right-0 gap-4">
+			<div class=" w-80 md:px-0 text-center md:text-right text-xl md:text-2xl transition-all duration-150 font-neueBitPro">
 				Experiencia con Portales de Web y soluciones tecnológicas.
-				<label class="font-neueBitPro hover:text-yellow-dodie text-xl md:text-2xl transition-all duration-150"> Logic → UI Integration → Deploy on Production</label>
+				<label class="hover:text-yellow-dodie text-xl md:text-2xl transition-all duration-150"> Logic → UI Integration → Deploy on Production</label>
 			</div>
 			<ListTools client:load/>
 		</div>
-		<div id="scroll" class="container lg:absolute flex w-full md:w-3/5 lg:w-2/5 h-24 justify-end items-start align-middle flex-wrap 
-			lg:bottom-24 lg:right-0 px-4 gap-4 transition-all duration-150">
-			<h1 class=" font-neueBitPro text-2xl text-center uppercase text-gray-600">Scroll to Explore ↴</h1>
-		</div>
 	</section>
-	<section id="home-view" class="container flex flex-col w-full h-auto justify-center items-center py-20 animate-this bg-transparent lg:gap-12 z-20 text-cultured">
+	<section id="home-view" class="container flex flex-col w-full h-auto justify-center items-center py-20 animate-this bg-transparent lg:gap-12 
+		 z-20 text-cultured not-selectable">
 		<div class="container flex w-full h-full cjustify-center items-center">
 			<ListProjects client:load/>
 		</div>
-		<!--
-			SE UBICARÁN LOS PROYECTOS
-			-> Con enlace a un dialog sacando la información de estos,
-			-> Revisar si es factible hacer scrapping para actualizar la información
-		-->
 	</section>
 	<section id="contact" class="container flex flex-col w-full min-h-screen justify-center items-center py-20 animate-this bg-transparent lg:gap-12 z-20 text-cultured">
 		<div class="container flex w-full h-full justify-center items-center ">
@@ -57,7 +68,7 @@ import ContactForm from '@components/contactForm.svelte'
 <style lang="scss">
 
 .size-subtitle {
-	font-size: 4vh;
+	font-size: 8vh;
 	line-height: 0.75;
 }
 .size-title {
